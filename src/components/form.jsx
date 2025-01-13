@@ -25,8 +25,8 @@ function Formulario() {
             <div className="flex justify-between px-4 py-2 rounded-md bg-slate-200">
                 <label htmlFor="nombre">Nombre:</label>
                 <input id="nombre" name="nombre" className="ring-2"
-                    // pattern="[A-Za-zÑñÁÉÍÓÚáéíóú]{1,5}"
-                    // title="Mínimo 1 letra, máximo 5 letras"
+                    //pattern="[A-Za-zÑñÁÉÍÓÚáéíóú]{2,10}"
+                    //title="Mínimo 2 letras, máximo 10 letras"
                     defaultValue={state.payload?.get("nombre") || ""}  // para recuperar el valor introducido previamente
                 />
             </div>
@@ -43,7 +43,7 @@ function Formulario() {
                 <label htmlFor="edad">Edad:</label>
                 <input type='number' id="edad" name="edad" className="ring-2"
                     defaultValue={state.payload?.get("edad") || ""}  // para recuperar el valor introducido previamente
-                // min={18} max={65}
+                    //min={16} max={70}
                 />
             </div>
             {state.issues?.edad &&
@@ -72,8 +72,8 @@ function Formulario() {
                 <label htmlFor="telefono">Teléfono móvil:</label>
                 <input type='tel' id="telefono" name="telefono" className="ring-2"
                     defaultValue={state.payload?.get("telefono") || ""}  // para recuperar el valor introducido previamente
-                // pattern="[678]{1}[0-9]{8}"
-                // title="9 dígitos, siendo el primero 6,7 u 8"
+                 //pattern="[678]{1}[0-9]{8}"
+                 //title="9 dígitos, siendo el primero 6,7 u 8"
                 />
             </div>
             {state.issues?.telefono &&
@@ -88,7 +88,7 @@ function Formulario() {
                 <label htmlFor="fecha">Fecha de incidencia:</label>
                 <input type="date" id="fecha" name="fecha" className="ring-2"
                     defaultValue={state.payload?.get("fecha") || new Date().toISOString().split('T')[0]}  // para recuperar el valor introducido previamente
-                // min="2024-01-01" max="2024-12-31"
+                 //min="2024-01-01" max="2025-12-31"
                 />
             </div>
             {state.issues?.fecha &&
@@ -103,6 +103,7 @@ function Formulario() {
                 <label htmlFor="comentario">Comentario:</label>
                 <textarea id="comentario" name="comentario" className="ring-2"
                     defaultValue={state.payload?.get("comentario") || ""}  // para recuperar el valor introducido previamente
+                    //minLength = {2}
                 />
             </div>
             {state.issues?.comentario &&
