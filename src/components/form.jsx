@@ -46,7 +46,11 @@ function Formulario() {
                 // min={18} max={65}
                 />
             </div>
-            {state.issues?.edad && state.issues.edad}
+            {state.issues?.edad &&
+                < div className="text-sm font-medium text-red-600 bg-red-50 rounded-md flex items-center border">
+                    {<CircleAlert className="inline m-4 mr-2 size-4" />} {state.issues.edad}
+                </div>
+            }
 
 
 
@@ -56,7 +60,11 @@ function Formulario() {
                     defaultValue={state.payload?.get("email") || ""}  // para recuperar el valor introducido previamente
                 />
             </div>
-            {state.issues?.email && state.issues.email}
+            {state.issues?.email &&
+                < div className="text-sm font-medium text-red-600 bg-red-50 rounded-md flex items-center border">
+                    {<CircleAlert className="inline m-4 mr-2 size-4" />} {state.issues.email}
+                </div>
+            }
 
 
 
@@ -68,7 +76,11 @@ function Formulario() {
                 // title="9 dígitos, siendo el primero 6,7 u 8"
                 />
             </div>
-            {state.issues?.telefono && state.issues.telefono}
+            {state.issues?.telefono &&
+                < div className="text-sm font-medium text-red-600 bg-red-50 rounded-md flex items-center border">
+                    {<CircleAlert className="inline m-4 mr-2 size-4" />} {state.issues.telefono}
+                </div>
+            }
 
 
 
@@ -79,7 +91,11 @@ function Formulario() {
                 // min="2024-01-01" max="2024-12-31"
                 />
             </div>
-            {state.issues?.fecha && state.issues.fecha}
+            {state.issues?.fecha &&
+                < div className="text-sm font-medium text-red-600 bg-red-50 rounded-md flex items-center border">
+                    {<CircleAlert className="inline m-4 mr-2 size-4" />} {state.issues.fecha}
+                </div>
+            }
 
 
 
@@ -89,7 +105,11 @@ function Formulario() {
                     defaultValue={state.payload?.get("comentario") || ""}  // para recuperar el valor introducido previamente
                 />
             </div>
-            {state.issues?.comentario && state.issues.comentario}
+            {state.issues?.comentario &&
+                < div className="text-sm font-medium text-red-600 bg-red-50 rounded-md flex items-center border">
+                    {<CircleAlert className="inline m-4 mr-2 size-4" />} {state.issues.comentario}
+                </div>
+            }
 
 
 
